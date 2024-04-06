@@ -6,7 +6,7 @@
 * 
 *  https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
 * 
-* Name: Pruthvi Patel Student ID: 170733216 Date: 21st March, 2024
+* Name: Pruthvi Patel Student ID: 170733216 Date: 5th April, 2024
 * Deployment Link: https://metropolitan-musuem-of-art-collections.vercel.app/ 
 * Github repo link: https://github.com/pvp-45/MetropolitanMusuemOfArtCollections 
 *
