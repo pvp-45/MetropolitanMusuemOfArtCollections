@@ -6,7 +6,9 @@ trigger:
      - master
 
 pool:
-  vmImage: ubuntu-latest
+  name: MyPool
+  demands:
+  - agent.name -equals MyAgent
   
 
 steps:
