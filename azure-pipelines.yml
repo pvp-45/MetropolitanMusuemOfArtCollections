@@ -6,7 +6,9 @@ trigger:
      - master
 
 pool:
-  name: 'III'
+  name: 'MyPool'
+  demands:
+    - agent.name -equals MyAgent
 
 steps:
 - task: DockerInstaller@0
