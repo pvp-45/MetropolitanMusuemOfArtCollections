@@ -1,0 +1,35 @@
+# Metropolitan CI CD Pipeline
+
+trigger:
+ branches:
+   include:
+     - master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: DockerInstaller@0
+  inputs:
+    dockerVersion: '20.10.8'
+
+- checkout: self
+
+#Build docker image
+- task: Docker@2
+  inputs:
+    containerRegistry: 'DockerHubConnection'
+    repository: 'pvp45/node-app'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    tags: '$(Build.BuildId)'
+
+#Deploy to Azure App Service
+- task: AzureWebAppContainer@1
+  inputs:
+   azureSubscription: 'test'
+   appName: 'MetropolitanProjectCICD'
+   containers: 'pvp45/node-app:$(Build.BuildId)' 
+
+
+ 
