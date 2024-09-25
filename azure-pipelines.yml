@@ -11,9 +11,6 @@ pool:
     - agent.name -equals MyAgent
 
 steps:
-- task: DockerInstaller@0
-  inputs:
-    dockerVersion: '20.10.8'
 
 - checkout: self
 
