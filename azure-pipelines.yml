@@ -31,5 +31,5 @@ steps:
 - task: AzureWebAppContainer@1
   inputs:
     azureSubscription: 'SystemAssignedConnection'
-    appName: 'MetropolitanProjectCICD'
+    appName: 'MetropolitanWebAppCICD'
     containers: 'pvp45/node-app:$(Build.BuildId)'
