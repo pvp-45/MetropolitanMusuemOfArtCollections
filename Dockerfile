@@ -1,4 +1,4 @@
-FROM node:18
+FROM mcr.microsoft.com/windows/servercore:ltsc2019
 
 WORKDIR /usr/src/app
 
