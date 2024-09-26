@@ -6,9 +6,9 @@ trigger:
       - master
 
 pool:
-  name: 'MyPool'
+  name: 'MyVMPool'
   demands:
-    - agent.name -equals MyAgent
+    - agent.name -equals myVM
 
 steps:
 
