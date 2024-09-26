@@ -26,6 +26,6 @@ steps:
 # Deploy to Azure App Service
 - task: AzureWebAppContainer@1
   inputs:
-    azureSubscription: 'test'
+    azureSubscription: 'SystemAssignedConnection'
     appName: 'MetropolitanProjectCICD'
     containers: 'pvp45/node-app:$(Build.BuildId)'
